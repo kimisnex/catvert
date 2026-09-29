@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme {
+  --color-night: #0e0e11;
+  --color-panel: #161619;
+  --color-panel2: #1f1f24;
+  --color-line: #2b2b31;
+  --color-ink: #ececee;
+  --color-mute: #9b9ba4;
+  --color-vio: #a78bfa;
+  --color-fux: #e879f9;
+  --color-warn: #f87171;
+
+  --font-display: "Unbounded", "Manrope", system-ui, sans-serif;
+  --font-body: "Manrope", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", monospace;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--color-night);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100dvh;
+}
+
+/* transparency checkerboard — the signature texture */
+.checker {
+  background-image: conic-gradient(
+    #1a1a1e 25%,
+    #131316 0 50%,
+    #1a1a1e 0 75%,
+    #131316 0
+  );
+  background-size: 18px 18px;
+}
+
+.checker-fine {
+  background-image: conic-gradient(
+    #161619 25%,
+    #111114 0 50%,
+    #161619 0 75%,
+    #111114 0
+  );
+  background-size: 12px 12px;
+}
+
+.text-gradient {
+  background: linear-gradient(92deg, var(--color-vio), var(--color-fux));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* primary action: light button on dark page — high contrast, no color */
+.btn-primary {
+  background: var(--color-ink);
+  color: var(--color-night);
+  transition: transform 120ms ease, background 120ms ease, opacity 120ms ease;
+}
+.btn-primary:hover:not(:disabled) {
+  background: #ffffff;
+}
+.btn-primary:active:not(:disabled) {
+  transform: scale(0.985);
+}
+.btn-primary:disabled {
+  opacity: 0.45;
+}
+
+:where(button, a, input, select, [tabindex]):focus-visible {
+  outline: 2px solid var(--color-vio);
+  outline-offset: 2px;
+  border-radius: 0.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

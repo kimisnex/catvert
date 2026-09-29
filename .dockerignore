@@ -1,0 +1,7 @@
+node_modules
+dist
+.git
+.gitignore
+.zcode
+*.md
+.DS_Store
