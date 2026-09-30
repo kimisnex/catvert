@@ -11,8 +11,8 @@
   --color-fux: #e879f9;
   --color-warn: #f87171;
 
-  --font-display: "Fredoka", "Nunito", system-ui, sans-serif;
-  --font-body: "Fredoka", "Nunito", system-ui, -apple-system, sans-serif;
+  --font-display: "Fredoka", "M PLUS Rounded 1c", system-ui, sans-serif;
+  --font-body: "Fredoka", "M PLUS Rounded 1c", system-ui, -apple-system, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", monospace;
 }
 
