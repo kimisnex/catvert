@@ -107,7 +107,7 @@ export default function PreviewPlayer({ meta, format, fps, frameIndex }: Props) 
     <div className="flex flex-col gap-2">
       <div
         ref={boxRef}
-        className="checker aspect-square w-full overflow-hidden rounded-xl p-1.5 shadow-[inset_0_0_0_1px_rgb(255_255_255/0.04)] [&_canvas]:h-full [&_canvas]:w-full"
+        className="checker mx-auto aspect-square w-full max-w-sm overflow-hidden rounded-xl p-1.5 shadow-[inset_0_0_0_1px_rgb(255_255_255/0.04)] [&_canvas]:h-full [&_canvas]:w-full"
       />
 
       <div className={`flex items-center gap-3 ${format === 'png' ? 'opacity-40' : ''}`}>
