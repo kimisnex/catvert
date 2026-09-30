@@ -127,7 +127,7 @@ export default function App() {
       <Header />
       <div className="mx-auto flex w-full max-w-4xl flex-1 flex-col px-4 md:px-6">
 
-      <main className="flex-1 pb-8">
+      <main className="flex flex-1 flex-col pb-8">
         {errorKey && (
           <div
             role="alert"
@@ -151,19 +151,18 @@ export default function App() {
         )}
 
         {!meta && (
-          <section className="flex flex-col items-center pb-14 pt-2 text-center md:pb-20 md:pt-6">
+          <section className="flex flex-1 flex-col items-center justify-center gap-12 py-16 text-center">
             <h1 className="flex items-center gap-5 font-display text-6xl font-bold tracking-tight text-ink md:text-7xl">
               <img src="/logo.png" alt="" className="h-20 w-20 object-contain md:h-28 md:w-28" />
               <span>
                 cat<span className="text-vio">vert</span>
               </span>
             </h1>
+            <Dropzone onFile={(f) => void handleFile(f)} onError={(c) => setErrorKey(`err.${c}`)} />
           </section>
         )}
 
-        {!meta ? (
-          <Dropzone onFile={(f) => void handleFile(f)} onError={(c) => setErrorKey(`err.${c}`)} />
-        ) : (
+        {meta && (
           <div className="grid grid-cols-1 items-start gap-5 md:grid-cols-[minmax(0,5fr)_minmax(0,4fr)]">
             <div className="min-w-0 md:sticky md:top-5">
               <PreviewPlayer
