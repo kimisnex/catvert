@@ -151,10 +151,12 @@ export default function App() {
         )}
 
         {!meta && (
-          <section className="flex flex-col items-center gap-4 pb-14 pt-2 text-center md:pb-20 md:pt-6">
-            <img src="/logo.png" alt="" className="h-28 w-28 object-contain md:h-36 md:w-36" />
-            <h1 className="font-display text-6xl font-bold tracking-tight text-ink md:text-7xl">
-              cat<span className="text-vio">vert</span>
+          <section className="flex flex-col items-center pb-14 pt-2 text-center md:pb-20 md:pt-6">
+            <h1 className="flex items-center gap-5 font-display text-6xl font-bold tracking-tight text-ink md:text-7xl">
+              <img src="/logo.png" alt="" className="h-20 w-20 object-contain md:h-28 md:w-28" />
+              <span>
+                cat<span className="text-vio">vert</span>
+              </span>
             </h1>
           </section>
         )}
