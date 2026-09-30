@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import Dropzone from './components/Dropzone';
-import LangSwitch from './components/LangSwitch';
+import Header from './components/Header';
 import PreviewPlayer from './components/PreviewPlayer';
 import SettingsPanel from './components/SettingsPanel';
 import ResultCard, { type ConvertResult } from './components/ResultCard';
@@ -123,14 +123,9 @@ export default function App() {
     : '';
 
   return (
-    <div className="mx-auto flex min-h-dvh w-full max-w-4xl flex-col px-4 md:px-6">
-      <header className="flex items-center justify-between py-3.5">
-        <div className="font-display text-sm font-bold tracking-tight text-ink md:text-base">
-          tgs<span className="text-vio">→</span>
-          <span className="text-gradient">emoji</span>
-        </div>
-        <LangSwitch />
-      </header>
+    <div className="flex min-h-dvh flex-col">
+      <Header />
+      <div className="mx-auto flex w-full max-w-4xl flex-1 flex-col px-4 md:px-6">
 
       <main className="flex-1 pb-8">
         <section className="pb-5 pt-1 md:pt-3">
@@ -223,6 +218,7 @@ export default function App() {
       <footer className="border-t border-line/60 py-4">
         <p className="font-mono text-[11px] text-mute/70">{t('footer')}</p>
       </footer>
+      </div>
     </div>
   );
 }
