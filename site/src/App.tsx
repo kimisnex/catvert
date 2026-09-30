@@ -128,9 +128,9 @@ export default function App() {
       <div className="mx-auto flex w-full max-w-4xl flex-1 flex-col px-4 md:px-6">
 
       <main className="flex-1 pb-8">
-        <section className="flex flex-col items-center gap-2 pb-8 pt-2 text-center md:pb-9 md:pt-4">
-          <h1 className="flex items-center gap-4 font-display text-5xl font-bold tracking-tight text-ink md:text-6xl">
-            <img src="/logo.png" alt="" className="h-20 w-20 object-contain md:h-24 md:w-24" />
+        <section className="flex flex-col items-center gap-2 pb-10 pt-4 text-center md:pb-12 md:pt-6">
+          <h1 className="flex items-center gap-5 font-display text-6xl font-bold tracking-tight text-ink md:text-7xl">
+            <img src="/logo.png" alt="" className="h-16 w-16 object-contain md:h-28 md:w-28" />
             <span>
               cat<span className="text-vio">vert</span>
             </span>
