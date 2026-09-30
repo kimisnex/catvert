@@ -131,7 +131,13 @@ export default function Header() {
           <div className="relative">
             <button
               type="button"
-              onClick={() => setLangOpen((o) => !o)}
+              onPointerDown={() => setLangOpen((o) => !o)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  setLangOpen((o) => !o);
+                }
+              }}
               aria-expanded={langOpen}
               className="flex items-center gap-2 rounded-xl border border-line bg-panel2/50 px-3 py-2 text-sm font-semibold text-ink transition-colors hover:border-mute/40"
             >
@@ -170,7 +176,13 @@ export default function Header() {
         {/* mobile burger */}
         <button
           type="button"
-          onClick={toggleMenu}
+          onPointerDown={toggleMenu}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              toggleMenu();
+            }
+          }}
           aria-expanded={menuOpen}
           aria-label="Menu"
           className="flex h-12 w-12 items-center justify-center rounded-xl text-vio transition-colors hover:bg-panel2 md:hidden"

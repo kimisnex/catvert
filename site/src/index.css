@@ -91,13 +91,19 @@ body {
 
 /* buttons: no text selection, no tap flash, no double-tap-zoom eating taps.
    touch-action is NOT inherited — the svg inside a button needs it too,
-   or center-taps on icons go through the double-tap-zoom detector */
+   or center-taps on icons go through the double-tap-zoom detector.
+   pointer-events:none on icons: a tap must always target the button itself —
+   clicks aimed at the svg child never reach React's onClick on touch */
 button,
 button * {
   -webkit-user-select: none;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
+}
+
+button svg {
+  pointer-events: none;
 }
 
 @keyframes menu-in {
