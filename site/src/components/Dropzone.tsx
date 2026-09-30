@@ -117,13 +117,6 @@ export default function Dropzone({ onFile, onError }: Props) {
     >
       <DemoEmoji />
 
-      <div className="flex items-center gap-2.5">
-        <img src="/logo.png" alt="" className="h-12 w-12 object-contain" />
-        <span className="font-display text-2xl font-bold tracking-tight text-ink">
-          cat<span className="text-vio">vert</span>
-        </span>
-      </div>
-
       <button
         type="button"
         onClick={(e) => {

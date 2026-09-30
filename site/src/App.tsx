@@ -128,13 +128,13 @@ export default function App() {
       <div className="mx-auto flex w-full max-w-4xl flex-1 flex-col px-4 md:px-6">
 
       <main className="flex-1 pb-8">
-        <section className="pb-5 pt-1 md:pt-3">
-          <h1 className="font-display text-xl font-bold leading-snug text-ink md:text-2xl">
-            {t('h1.pre')} <span className="text-gradient">{t('h1.grad')}</span>
+        <section className="flex flex-col items-center gap-2 pb-5 pt-1 text-center md:pt-3">
+          <h1 className="flex items-center gap-3 font-display text-4xl font-bold tracking-tight text-ink md:text-5xl">
+            <img src="/logo.png" alt="" className="h-14 w-14 object-contain md:h-20 md:w-20" />
+            <span>
+              cat<span className="text-vio">vert</span>
+            </span>
           </h1>
-          <p className="mt-2 max-w-xl text-xs leading-relaxed text-mute md:text-sm">
-            {t('sub')}
-          </p>
         </section>
 
         {errorKey && (
