@@ -163,7 +163,7 @@ export default function App() {
         )}
 
         {meta && (
-          <div className="grid grid-cols-1 items-start gap-5 md:grid-cols-[minmax(0,5fr)_minmax(0,4fr)]">
+          <div className="grid grid-cols-1 items-start gap-5 pt-2 md:grid-cols-[minmax(0,5fr)_minmax(0,4fr)] md:pt-3">
             <div className="min-w-0 md:sticky md:top-5">
               <PreviewPlayer
                 meta={meta}

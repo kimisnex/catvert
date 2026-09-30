@@ -186,7 +186,7 @@ export default function Header() {
 
       {/* mobile panel */}
       {menuOpen && (
-        <div className="menu-panel mx-auto mt-2 max-w-4xl rounded-2xl border border-line/80 bg-panel/95 p-2 shadow-xl shadow-black/50 backdrop-blur-md md:hidden">
+        <div className="menu-panel absolute left-4 right-4 top-[calc(100%+8px)] z-40 rounded-2xl border border-line/80 bg-panel/95 p-2 shadow-xl shadow-black/50 backdrop-blur-md md:hidden">
           <a
             href="https://github.com/kimisnex/catvert"
             target="_blank"
