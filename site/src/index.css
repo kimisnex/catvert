@@ -1,5 +1,16 @@
 @import "tailwindcss";
 
+/* Cyrillic Fredoka edit ("Fredoka One (RUS BY ME)") — latin glyphs are missing
+   from it by design, so latin falls through to Google's Fredoka automatically */
+@font-face {
+  font-family: "Fredoka One RUS";
+  src: url("/fonts/FredokaOneRUS.ttf") format("truetype");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0400-04FF, U+0500-052F, U+2DE0-2DFF, U+A640-A69F, U+2116;
+}
+
 @theme {
   --color-night: #0e0e11;
   --color-panel: #161619;
@@ -11,8 +22,8 @@
   --color-fux: #e879f9;
   --color-warn: #f87171;
 
-  --font-display: "Fredoka", "M PLUS Rounded 1c", system-ui, sans-serif;
-  --font-body: "Fredoka", "M PLUS Rounded 1c", system-ui, -apple-system, sans-serif;
+  --font-display: "Fredoka", "Fredoka One RUS", system-ui, sans-serif;
+  --font-body: "Fredoka", "Fredoka One RUS", system-ui, -apple-system, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", monospace;
 }
 
