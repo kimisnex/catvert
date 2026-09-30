@@ -69,6 +69,15 @@ export default function Header() {
   const rootRef = useRef<HTMLElement>(null);
 
   const current = LANGS.find((l) => l.id === lang) ?? LANGS[0];
+  const lastMenuTapRef = useRef(0);
+
+  const toggleMenu = () => {
+    // some mobile browsers double-dispatch clicks on taps — swallow the echo
+    const now = Date.now();
+    if (now - lastMenuTapRef.current < 350) return;
+    lastMenuTapRef.current = now;
+    setMenuOpen((o) => !o);
+  };
 
   useEffect(() => {
     const onDoc = (e: MouseEvent) => {
@@ -161,10 +170,10 @@ export default function Header() {
         {/* mobile burger */}
         <button
           type="button"
-          onClick={() => setMenuOpen((o) => !o)}
+          onClick={toggleMenu}
           aria-expanded={menuOpen}
           aria-label="Menu"
-          className="flex h-10 w-10 items-center justify-center rounded-xl text-vio transition-colors hover:bg-panel2 md:hidden"
+          className="flex h-12 w-12 items-center justify-center rounded-xl text-vio transition-colors hover:bg-panel2 md:hidden"
         >
           {menuOpen ? <Close className="h-5 w-5" /> : <Burger className="h-5 w-5" />}
         </button>
