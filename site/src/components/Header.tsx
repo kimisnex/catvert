@@ -101,7 +101,7 @@ export default function Header() {
     <header ref={rootRef} className="sticky top-3 z-50 px-4 md:px-6">
       <div className="mx-auto flex max-w-4xl items-center justify-between rounded-2xl border border-line/80 bg-panel/90 py-2 pl-2.5 pr-2.5 shadow-lg shadow-black/40 backdrop-blur-md">
         <a href="/" className="flex shrink-0 items-center gap-2.5 rounded-xl pr-2">
-          <img src="/logo.jpg" alt="" className="h-9 w-9 rounded-xl object-cover" />
+          <img src="/logo.png" alt="" className="h-11 w-11 object-contain" />
           <span className="font-display text-xl font-bold tracking-tight text-ink">
             cat<span className="text-vio">vert</span>
           </span>

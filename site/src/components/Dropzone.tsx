@@ -117,8 +117,23 @@ export default function Dropzone({ onFile, onError }: Props) {
     >
       <DemoEmoji />
 
-      <p className="font-display text-base font-medium text-ink md:text-lg">{t('drop.title')}</p>
-      <p className="-mt-1.5 text-xs text-mute md:text-sm">{t('drop.or')}</p>
+      <div className="flex items-center gap-2.5">
+        <img src="/logo.png" alt="" className="h-12 w-12 object-contain" />
+        <span className="font-display text-2xl font-bold tracking-tight text-ink">
+          cat<span className="text-vio">vert</span>
+        </span>
+      </div>
+
+      <button
+        type="button"
+        onClick={(e) => {
+          e.stopPropagation();
+          inputRef.current?.click();
+        }}
+        className="btn-primary rounded-xl px-6 py-2.5 text-sm font-bold md:text-base"
+      >
+        {t('drop.upload')}
+      </button>
 
       <button
         type="button"
