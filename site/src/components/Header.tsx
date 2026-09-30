@@ -69,15 +69,8 @@ export default function Header() {
   const rootRef = useRef<HTMLElement>(null);
 
   const current = LANGS.find((l) => l.id === lang) ?? LANGS[0];
-  const lastMenuTapRef = useRef(0);
 
-  const toggleMenu = () => {
-    // some mobile browsers double-dispatch clicks on taps — swallow the echo
-    const now = Date.now();
-    if (now - lastMenuTapRef.current < 350) return;
-    lastMenuTapRef.current = now;
-    setMenuOpen((o) => !o);
-  };
+  const toggleMenu = () => setMenuOpen((o) => !o);
 
   useEffect(() => {
     const onDoc = (e: MouseEvent) => {
