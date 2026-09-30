@@ -174,7 +174,7 @@ export default function Header() {
       {menuOpen && (
         <div className="mx-auto mt-2 max-w-4xl rounded-2xl border border-line/80 bg-panel/95 p-2 shadow-xl shadow-black/50 backdrop-blur-md md:hidden">
           <a
-            href="https://github.com/kimisnex"
+            href="https://github.com/kimisnex/catvert"
             target="_blank"
             rel="noreferrer"
             onClick={() => setMenuOpen(false)}
