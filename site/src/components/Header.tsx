@@ -119,7 +119,7 @@ export default function Header() {
         {/* desktop nav */}
         <nav className="hidden items-center gap-1.5 md:flex">
           <a
-            href="https://github.com/kimisnex"
+            href="https://github.com/kimisnex/catvert"
             target="_blank"
             rel="noreferrer"
             className="flex items-center gap-2 rounded-xl px-3.5 py-2 text-sm font-semibold text-mute transition-colors hover:bg-panel2 hover:text-ink"
@@ -142,7 +142,7 @@ export default function Header() {
             </button>
 
             {langOpen && (
-              <div className="absolute right-0 top-[calc(100%+8px)] w-48 rounded-xl border border-line bg-panel p-1.5 shadow-xl shadow-black/50">
+              <div className="menu-panel absolute right-0 top-[calc(100%+8px)] w-48 origin-top-right rounded-xl border border-line bg-panel p-1.5 shadow-xl shadow-black/50">
                 {LANGS.map(({ id, name, short, Flag }) => (
                   <button
                     key={id}
@@ -181,7 +181,7 @@ export default function Header() {
 
       {/* mobile panel */}
       {menuOpen && (
-        <div className="mx-auto mt-2 max-w-4xl rounded-2xl border border-line/80 bg-panel/95 p-2 shadow-xl shadow-black/50 backdrop-blur-md md:hidden">
+        <div className="menu-panel mx-auto mt-2 max-w-4xl rounded-2xl border border-line/80 bg-panel/95 p-2 shadow-xl shadow-black/50 backdrop-blur-md md:hidden">
           <a
             href="https://github.com/kimisnex/catvert"
             target="_blank"
